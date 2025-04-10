@@ -1,0 +1,25 @@
+{
+    "model_type": "XGBoost",
+    "model_params": {
+        "objective": "multi:softprob",
+        "num_class": 3,
+        "max_depth": 5,
+        "eta": 0.1886228387294129,
+        "subsample": 0.6274672763970465,
+        "colsample_bytree": 0.5011094895997235,
+        "eval_metric": "mlogloss",
+        "seed": 42
+    },
+    "resize_shape": [
+        32,
+        32
+    ],
+    "best_iteration": 98,
+    "validation_accuracy": 0.9118457300275482,
+    "best_hyperparameters": {
+        "max_depth": 5,
+        "eta": 0.1886228387294129,
+        "subsample": 0.6274672763970465,
+        "colsample_bytree": 0.5011094895997235
+    }
+}

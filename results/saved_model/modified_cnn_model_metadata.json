@@ -1,0 +1,21 @@
+{
+    "model_class": "CNN",
+    "model_params": {
+        "input_shape": [
+            224,
+            224,
+            3
+        ],
+        "num_classes": 3
+    },
+    "training_hyperparameters": {
+        "epochs": 20,
+        "optimizer": "Adam",
+        "batch_size": 32
+    },
+    "masking_data": {
+        "combined_mask_path": "..\\masking_data\\combined_mask.npy",
+        "binary_mask_path": "..\\masking_data\\binary_mask.npy"
+    },
+    "notes": "Images modified using aggregated LIME and RF masks to remove noise."
+}

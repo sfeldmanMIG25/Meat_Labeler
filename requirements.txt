@@ -1,0 +1,43 @@
+Below is a minimal set of required packages. Used PyTorch with CUDA 11.8/CUDNN, running on an NVIDIA RTX 3700 Ti. 
+
+# Numerical computing
+numpy>=1.23
+
+# Deep learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Image I/O and processing
+Pillow>=9.0
+opencv-python>=4.7
+scikit-image>=0.20
+
+# Data handling
+pandas>=1.5
+scikit-learn>=1.1
+
+# Modeling
+xgboost>=1.7
+optuna>=3.0
+
+# Interpretability
+lime>=0.2.0.1
+
+# Visualization
+matplotlib>=3.6
+seaborn>=0.12
+
+# Utilities
+tqdm>=4.64
+
+Hardware & Configuration:
+
+GPU: NVIDIA RTX 3700 Ti
+
+CUDA: 11.8
+
+CUDNN: 8.x (matching CUDA 11.8) #Must attempt manual installation as installation through pip will not work on that version.
+
+PyTorch: Build with CUDA support (pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118)
+
+Users without an NVIDIA GPU can install the CPU‑only wheel (pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu).
