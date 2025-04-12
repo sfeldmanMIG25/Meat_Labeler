@@ -64,8 +64,7 @@ notebooks/Analysis_Final_Results.ipynb
 
 ## Recommendation
 
-Deploy the **Modified CNN** in production for its interpretability-driven masking and low misclassification risk.
-This project presents a comprehensive machine learning pipeline for classifying the freshness of meat samples. The goal is to automatically distinguish between Fresh, Half-Fresh, and Spoiled meat images to enhance food safety and quality control. Our approach combines several modeling techniques, interpretability methods, and evaluation strategies to ensure robust performance and consumer safety.
+Further, investigate and implement gentler masking to help adjust inputs into the ViT rather than the CNN.
 
 ## Project Structure
 
@@ -130,13 +129,10 @@ This project presents a comprehensive machine learning pipeline for classifying 
 
 ## Conclusion and Recommendations
 
-THe best model accuracy was achieved with the Baseline CNN at 91.35%, however, this came at the cost of an expensive model with a reisk of misclassication of 11.40% against consumers which is the not the best result on the list. The modified CNN scored worse than any other model on the list due to the screen being designed as binary. Further manipulations may have produced a model with better outcomes, however, that will be in future steps. ViT did best when it came correctly identifying spoiled meat as spoiled with only 6.14% misidentified in that way, however, the overall model accuracy was almost 10% worse. The model is slightly smaller in size but not by much. The XGBoost method produce a method with similar accuracy to the VIT, a much smalller size but a misclassification risk of almsot 24%. That means implementing such a model is unlikely to offer automated quality control abilities here. Based on the constraints of a manufacturing site, most likely, the XGBoost model will be reccomended due its smaller size. Better tuning and a more powerful machine fo training overcome its accuracy challenges.
+The best model accuracy was achieved with the Baseline CNN at 91.35%, however, this came at the cost of an expensive model with a reisk of misclassication of 11.40% against consumers which is the not the best result on the list. The modified CNN scored worse than any other model on the list due to the screen being designed as binary. Further manipulations may have produced a model with better outcomes, however, that will be in future steps. ViT did best when it came correctly identifying spoiled meat as spoiled with only 6.14% misidentified in that way, however, the overall model accuracy was almost 10% worse. The model is slightly smaller in size but not by much. The XGBoost method produce a method with similar accuracy to the VIT, a much smalller size but a misclassification risk of almsot 24%. That means implementing such a model is unlikely to offer automated quality control abilities here. Based on the constraints of a manufacturing site, most likely, the XGBoost model will be reccomended due its smaller size. Better tuning and a more powerful machine fo training overcome its accuracy challenges.
 
 **Future Steps:**
 - **Fix Modified CNN** modify the screening algorithim to preserve more of the data. Tune it iteratively to assist in pre-screening incoming image data before the model is being validated. 
 - **Explore lightweight transformer architectures** to merge ViT accuracy with reduced model size.
-- **Continuously monitor** misclassification rates on new data and update the screening process as necessary.d
+- **Continuously monitor** misclassification rates on new data and update the screening process as necessary.
 
-## Acknowledgments
-
-This project builds upon advanced interpretability and hyperparameter tuning techniques. Special thanks to the contributors of LIME, RandomForest, PyTorch, and XGBoost for making these tools available to the community.
